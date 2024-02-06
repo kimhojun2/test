@@ -17,6 +17,8 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
-
+from zzzzz import start_server
 if __name__ == '__main__':
+    # 서버소켓 오픈
+    start_server()
     main()

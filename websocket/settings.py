@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'channels',
     'sockets',
+    'celery',
 
 ]
 
@@ -135,3 +136,6 @@ ASGI_APPLICATION = 'websocket.asgi.application'
 
 ALLOWED_HOSTS = ['*']
 # daphne -b 0.0.0.0 -p 8000 websocket.asgi:application
+from queue import Queue
+message_queue = Queue()
+client_sockets = [] 
